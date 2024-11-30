@@ -1,0 +1,86 @@
+In javascript,data types are divided into two main categories 
+1.Primitive 2.Non-Primitive
+
+1.Primitive
+
+Primitive data types are most basic types of data in javascript
+They are simple and immutable (meaning their values cannot be changed once they are created) 
+Each primitive data types represents single value.
+
+Examples of Primitive data types;
+
+Number : Represents numbers(both integer and decimals); eg 19, 1.11
+
+String : Represents text; eg "hello world"
+
+Boolean : Represents logical values, either true or false;
+
+Undefined : A variable with no assigned value is undefined;
+
+Null : Represents an empty or non-existent value
+
+Symbol : Used for creating unique identifiers(advanced use);
+
+BigInt : Allows you to represent integer larger than safe limit for numberl; eg 123n
+
+let age = 25;           // Number
+let name = "Alice";     // String
+let isStudent = true;   // Boolean
+let salary;             // Undefined
+let result = null;      // Null
+let id = Symbol('id');  // Symbol
+let bigNum = 12345678901234567890n; // BigInt
+
+
+Stored in Call Stack: Primitive values (like numbers, strings, booleans, etc.) are stored directly in the call stack when they are created.
+
+Immutable: Once a primitive value is created, it cannot be changed. If you try to change it, a new value is created instead.
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+2. Non-Primitive(reference) Data type;
+
+Non-primitive data types are more complex and are stored as reference.This means they don't directly hold the value but rather a reference(or "address") to the memory location where the data is stored 
+These types are mutable, meaning their contents can change;
+
+Examples of Non-primitive data types;
+
+Object : used to store the collections of data or more complex entities
+
+Array : A special type of Object for storing list of values 
+
+Function : A block code designed to preform a particular tasks
+
+let person = { name: "Alice", age: 25 }; // Object
+let numbers = [1, 2, 3, 4];               // Array
+function greet() {                        // Function
+    console.log("Hello!");
+}
+
+Stored in Heap Memory: The contents of non-primitive data types (objects, arrays, functions) are stored in heap memory.
+
+Reference in Call Stack: The variable in the call stack holds a reference to the location in heap memory where the actual data resides.
+
+Mutable: Non-primitive values can be changed after their creation, allowing you to modify the properties of an object or elements in an array.
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+Key Differences:
+
+Primitives hold actual values, while non-primitives hold references to memory locations.
+
+Primitives are immutable; non-primitives are mutable.
+
+Primitives can’t be broken down into simpler data types, but non-primitives can hold multiple values or functions.
+
+
+So, in simple terms:
+
+Primitive = simple, single values (like a name or age).
+
+Non-Primitive = complex structures or collections of values (like a list of names or an address book).
+
+Primitive Types: When declared, they are stored directly in the call stack, and their values can be executed immediately.
+
+Non-Primitive Types: When declared, the variable is stored in the call stack, while the actual data is stored in heap memory. The call stack holds a reference to this data.

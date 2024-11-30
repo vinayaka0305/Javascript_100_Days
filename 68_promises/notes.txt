@@ -1,0 +1,31 @@
+Problems with call back hell 
+
+The nested structure makes the code hard to read because each operation is indented further
+
+Diffucult to maintain when adding or modifying
+
+------------------------------------------------------------------------------------
+
+A promise in Javascript is an object representing the eventual completion or failurer of the asynchronous operation and resulting value 
+
+It act as placeholder for a future result, allowing code to run in a non-blocking way
+
+A promise can be in one of these three states
+
+1.pending - The intial state, neither fullfilled nor rejected;
+2.Fullfilled - The operation completed successfully,and the promise has a resulting value
+3.Rejected - The operation failed, and the promise has a reason(usually an error);
+
+promise make easier to handle asynchronous operations by enabling structured handling of success or failure througth .then(), .catch(), and .finally() methods
+
+
+------------------------------------------------------------------------------------
+
+In Javascript async and await are used to work with asynchronous code in simpler way;
+
+async : placed before a function to make it asynchronous, allowing it to handle promises
+
+await : Pauses a function execution until a promise is resolved, so you can get the result directly without .then() block
+
+Together async and await make it easier to write code that waits for things to finish(like fetching data) with nesting callbacks or chaining .then().
+

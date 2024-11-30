@@ -1,0 +1,16 @@
+body{
+    background-color: #444;
+    color: #fff;
+}
+
+.block{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border: 1px solid #fff;
+}
+
+.block-walls{
+    display: grid;
+    grid-template-columns: repeat(4,70px);
+}

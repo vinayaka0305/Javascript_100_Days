@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: rgba(49, 35, 197, 0.2);
+        padding: 50px;
+        text-align: left;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <a id="anchor" href="https://gaana-music-site.netlify.app/">go to website</a>
+    <br />
+    <p>click the div</p>
+    <div id="div2" onclick="fnc2()">
+      Div2
+      <div id="div1" onclick="fnc1(event)">Div1</div>
+    </div>
+    stop:propragation:
+    <input type="checkbox" id="check" />
+    <script src="script.js"></script>
+  </body>
+</html>

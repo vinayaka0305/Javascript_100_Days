@@ -1,0 +1,15 @@
+A callback is a function that you passed as an argument to another function
+This allows you to specify code that should run after certain task is completed
+
+Why use callbacks ?
+
+Callbacks are commly used for the tasks that take time to complete,fetching data from an server or waiting for timer to finish.
+They help to make sure that some code runs only after another piece of code has finished
+
+
+Summary
+Callbacks are used to handle tasks that take time. They allow us to wait for something to finish before running more code.
+
+In this example, the callback is executed after the timer is done, showing how we can work with asynchronous operations in JavaScript.
+
+By using callbacks, we can manage the flow of our code, ensuring that certain actions only happen after specific tasks are completed!
