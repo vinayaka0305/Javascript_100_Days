@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Dynamic Age calculator</h1>
+      <div id="input-section">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" />
+        <label for="tob">Time of Birth</label>
+        <input type="time" id="tob" />
+        <button onclick="calculateAge()">Calculate Age</button>
+      </div>
+      <div id="result">
+        <p>
+          The time you spent here: <br />
+          <span id="age-display">---</span>
+        </p>
+      </div>
+      <div id="error"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
