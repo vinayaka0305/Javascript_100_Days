@@ -27,4 +27,35 @@ const scoresArr = [
   
   // Call the function and log the result to the console
   console.log(calculateScore(scoresArr));
+
+
+
+  let students = [
+    { name: "anmol", subject: "maths", score: 88 },
+    { name: "raj", subject: "science", score: 74 },
+    { name: "anmol", subject: "kannada", score: 58 },
+    { name: "raj", subject: "maths", score: 144 },
+  ];
+  
+  const findHighestScore = (students) => {
+    const result = {};
+  
+    students.forEach((student) => {
+      if (!result[student.name]) {
+        result[student.name] = { totalScore: 0 };
+      }
+      result[student.name].totalScore += student.score;
+    });
+    console.log(result);
+    const resultArr = Object.keys(result).map((name) => ({
+      name,
+      totalScore: result[name].totalScore,
+    }));
+    console.log(resultArr);
+    const highScorer = resultArr.sort((a, b) => b.totalScore - a.totalScore);
+    console.log(highScorer[0]);
+  };
+  
+  findHighestScore(students);
+  
   
