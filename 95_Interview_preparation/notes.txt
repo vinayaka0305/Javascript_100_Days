@@ -1,0 +1,109 @@
+Valid Operation in JavaScript:
+
+const numbers = [1, 2, 3, 4];
+numbers[100] = 500;
+
+Assigning a value to an out-of-bounds index in an array is valid in JavaScript. The array will automatically expand to accommodate the new index.
+
+Sparse Array:
+The array becomes sparse because there are no values assigned for indices 4 to 99. These indices are considered "empty slots" (or holes).
+
+Output Behavior:
+The logged array shows <96 empty items> for the missing indices between 4 and 99.
+
+Key Points to Remember:
+Sparse arrays can cause unexpected behavior, especially when iterating over the array, as the "empty slots" are skipped by many array methods like forEach.
+Use this feature carefully, as it may lead to bugs or performance issues in large arrays.
+
+-------------------------------------------------------------------------------------
+Here’s the corrected explanation for `"use strict"` in JavaScript:
+
+---
+
+### **What is `"use strict"`?**
+
+`"use strict"` is a directive in JavaScript that enforces a stricter set of rules for writing code. It helps developers avoid common mistakes and makes the code more secure and easier to debug.
+
+---
+
+### **What Does It Do?**
+
+1. **Prevents Using Undeclared Variables:**
+   - Without `"use strict"`, assigning a value to an undeclared variable creates a global variable.
+   - With `"use strict"`, it throws an error if a variable is not declared using `var`, `let`, or `const`.
+     ```javascript
+     "use strict";
+     x = 10; // Error: x is not defined
+     ```
+
+2. **Disallows Duplicates in Function Parameters:**
+   - Duplicate parameter names are not allowed in strict mode.
+     ```javascript
+     "use strict";
+     function example(a, a) { // Error: Duplicate parameter name not allowed
+         return a;
+     }
+     ```
+
+3. **Restricts `this` in Functions:**
+   - In non-strict mode, `this` in a regular function refers to the global object (`window`).
+   - In strict mode, `this` is `undefined` if the function is called without a specific context.
+     ```javascript
+     "use strict";
+     function test() {
+         console.log(this); // `undefined` instead of `window`
+     }
+     test();
+     ```
+
+4. **Forbids Deleting Variables or Functions:**
+   - Strict mode prevents you from deleting variables or functions, which is not allowed anyway.
+     ```javascript
+     "use strict";
+     var a = 10;
+     delete a; // Error: Cannot delete a variable
+     ```
+
+5. **Prohibits Certain Reserved Words for Future Use:**
+   - Words like `implements`, `interface`, and `private` cannot be used as variable or function names.
+     ```javascript
+     "use strict";
+     var private = 10; // Error: Unexpected strict mode reserved word
+     ```
+
+---
+
+### **How to Use `"use strict"`?**
+
+1. **At the Beginning of a Script:**
+   - Applies strict mode to the entire script.
+     ```javascript
+     "use strict";
+     var x = 10;
+     ```
+
+2. **In a Specific Function:**
+   - Applies strict mode only to the function where it’s declared.
+     ```javascript
+     function myFunction() {
+         "use strict";
+         var y = 20; // Strict mode applies here
+     }
+     ```
+
+---
+
+### **Why Use `"use strict"`?**
+- Helps avoid common mistakes like using undeclared variables.
+- Makes the code easier to debug.
+- Ensures better compatibility with future JavaScript versions.
+
+---
+
+### **In Short:**
+- `"use strict"` enforces strict rules for writing clean and secure code.
+- It checks for undeclared variables, duplicate parameters, and other common mistakes.
+
+------------------------------------------------------------------------------------
+
+

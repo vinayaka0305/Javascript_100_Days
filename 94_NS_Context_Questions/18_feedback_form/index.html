@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" required />
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <label for="rating">How satisfied are you with our service?</label>
+        <div class="rating-options">
+          <select name="rating" id="rating" required>
+            <option value="1">Very dissatisfied</option>
+            <option value="2">Dissatisfied</option>
+            <option value="3">Neutral</option>
+            <option value="4">Satisfied</option>
+            <option value="5">Very satisfied</option>
+          </select>
+        </div>
+
+        <div class="submit-btn">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

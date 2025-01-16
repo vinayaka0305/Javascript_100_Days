@@ -1,0 +1,19 @@
+What Is Lexical Scope in JavaScript?
+Lexical scope means that the scope of a variable (where it can be accessed) is determined by its position in the code when it's written, not when it runs.
+
+In simple terms:
+
+Where you write the variable in your code decides which parts of the code can use it.
+Functions remember where they were defined and have access to variables in their outer scopes.
+
+Lexical scope means a function can access variables defined in its outer scope based on where it was written in the code
+
+Fun Fact: Lexical Scope and Closures
+Closures happen because of lexical scope. Even when a function is called later, it "remembers" the variables from where it was created.
+
+
+Why Does Lexical Scope Matter?
+It ensures:
+
+Code clarity: You know which variables a function can access by looking at where it's written.
+Predictable behavior: A function's access to variables doesn't change based on where it's called, only where it's written.
