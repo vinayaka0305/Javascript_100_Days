@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="vinayaka.jpeg"
+      alt="Example of an image map"
+      usemap="#myImageMap"
+    />
+
+    <map name="myImageMap">
+      <!-- Rectangular area -->
+      <area
+        shape="rect"
+        coords="34,44,270,350"
+        href="https://example.com/rectangle"
+        alt="Rectangle"
+      />
+
+      <!-- Circular area -->
+      <area
+        shape="circle"
+        coords="130,136,60"
+        href="https://example.com/circle"
+        alt="Circle"
+      />
+
+      <!-- Polygonal area -->
+      <area
+        shape="poly"
+        coords="120,50,200,80,160,210"
+        href="https://example.com/polygon"
+        alt="Polygon"
+      />
+    </map>
+
+    <!-- Explanation
+The <img> tag:
+Displays the image.
+The usemap="#myImageMap" associates the image with the <map> tag.
+The <map> tag:
+Contains multiple <area> tags defining the clickable regions.
+Each <area> tag:
+Specifies the shape and coordinates of the region.
+Includes a link (href) for navigation and alt for accessibility.
+     -->
+  </body>
+</html>

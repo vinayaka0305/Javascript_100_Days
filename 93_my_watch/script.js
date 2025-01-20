@@ -29,11 +29,11 @@ function start() {
   }, 1000);
 }
 
-function stop(){
-    clearInterval(interval);
+function stop() {
+  clearInterval(interval);
 }
 
-function reset(){
-    clearInterval(interval);
-    display.innerHTML = '00:00:00'
+function reset() {
+  clearInterval(interval);
+  display.innerHTML = "00:00:00";
 }

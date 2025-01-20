@@ -1,0 +1,38 @@
+/* [attribute] - Select elements with a specific attribute */
+a[href] {
+  color: red; /* All <a> elements with an href attribute will be red */
+}
+
+/* [attribute="value"] - Select elements with a specific attribute that exactly matches the value */
+a[href="https://example.com"]
+{
+  font-weight: bold;
+}
+
+/* [attribute~="value"] - Select elements with an attribute that contains a whole word */
+a[class~="external-link"] {
+  text-decoration: none;
+}
+
+/* [attribute|="value"] - Select elements with an attribute value starting with a specific value followed by a hyphen or space */
+a[href|="https://"]
+{
+  color: green; /* All <a> elements with href starting with "https://" */
+}
+
+/* [attribute^="value"] - Select elements with an attribute value starting with a specific value */
+a[href^="https://my"]
+{
+  font-size: 40px; /* The link whose href starts with "https://my" will have a font size of 40px */
+}
+
+/* [attribute$="value"] - Select elements with an attribute value ending with a specific value */
+a[href$=".org"] {
+  font-size: 2em;
+  font-style: italic; /* Links whose href ends with ".org" will have italic text */
+}
+
+/* [attribute*="value"] - Select elements with an attribute value containing a specific substring */
+a[href*="example"] {
+  background-color: yellow; /* All links containing "example" in the href will have a yellow background */
+}
