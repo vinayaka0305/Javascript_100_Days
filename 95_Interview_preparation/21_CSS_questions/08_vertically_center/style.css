@@ -1,0 +1,21 @@
+#container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 200px; /* Set a height for the container */
+    border: 1px solid #000; /* Optional: just to visualize the container */
+  }
+
+/* #container {
+    height: 200px;
+    line-height: 200px; /* Match line-height to container height */
+    /* text-align: center; /* Horizontally center */
+    /* border: 1px solid #000; /* Optional: just to visualize the container */
+  
+
+  /* #container {
+    display: grid;
+    place-items: center; /* Center items vertically and horizontally */
+    /* height: 200px;
+    border: 1px solid #000; /* Optional: just to visualize the container */
+  /* } */ 

@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+
+#fruitType, #filterBtn {
+    margin-top: 20px;
+}
+
+#fruitList {
+    list-style-type: none;
+    margin-top: 30px;
+    padding-left: 0;
+}
