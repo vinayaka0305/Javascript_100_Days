@@ -27,5 +27,8 @@ const students = [
   };
   
   // Call the function and log the output
-  console.log(getTotalScoreOfEach(students));
-  
+  const obj = getTotalScoreOfEach(students);
+
+for (let student in obj) {
+  console.log(`${student}: Total Score = ${obj[student].totalScore}`);
+}
