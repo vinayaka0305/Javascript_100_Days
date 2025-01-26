@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+#recipeList{
+    list-style-type: none;
+}
+
+#recipeList li{
+    width: 300px;
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#recipeReadyInMinutes{
+    margin-top: 20px;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
