@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    background-color:#ACBCFF;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #title-container {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  li{
+    padding: 5px;
+    margin: 0px;
+    list-style-type: none;
+  }
+
+  li:nth-child(even){
+    background-color: #AEE2FF;
+  }
+  li:nth-child(odd){
+    background-color: #E6FFFD;
+  }
+
+@media(max-width:600px){
+    body{
+        padding: 100;
+    }
+}
