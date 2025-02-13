@@ -1,18 +1,46 @@
-const obj1 = {
-  a: 2,
-  b: { c: 2 },
-};
+const textDis = document.querySelector('#text');
+const countDis = document.querySelector('#count');
+const input1 = document.querySelector('#input1');
+const input2 = document.querySelector('#input2');
+const toggleBtn = document.querySelector('#toggle');
 
 
-// const objshallow = {...obj1};
+let timer;
 
-// objshallow.a = 3;
 
-// console.log(obj1,"obj1");
-// console.log(objshallow,"shallow");
-obj1.b.c = 2000
-const deepcopy = JSON.parse(JSON.stringify(obj1));
-deepcopy.b.c = 300;
+toggleBtn.addEventListener('click',()=>{
+    if(input2.style.display === "none"){
+      input2.style.display = "inline"
+      // input2.removeAttribute('disabled')
+    }else{
+      input2.style.display = "none";
+      // input2.setAttribute('disabled','true');
+    }
+})
 
-console.log(obj1,"original");
-console.log(deepcopy,"deepcopy");
+const handleChange1=(e)=>{
+  const inputVal = e.target.value;
+  countDis.textContent = inputVal.length;
+  clearTimeout(timer);
+  timer = setTimeout(()=>{
+    if(inputVal.length>0){
+      textDis.textContent = inputVal;
+      input1.value = '';
+      countDis.textContent = 0;
+    }
+  },1000)
+}
+
+
+const handleChange2=(e)=>{
+  const inputVal = e.target.value;
+  countDis.textContent = inputVal.length;
+  clearTimeout(timer);
+  timer = setTimeout(()=>{
+    if(inputVal.length>0){
+      textDis.textContent = inputVal;
+      input2.value = '';
+      countDis.textContent = 0;
+    }
+  },1000)
+}
