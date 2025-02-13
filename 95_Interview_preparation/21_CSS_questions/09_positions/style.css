@@ -1,0 +1,46 @@
+/* The container div acts as the parent for positioning elements */
+.container {
+    position: relative; /* Allows child elements with absolute positioning to be positioned relative to this */
+    height: 2000px; /* Ensures enough space for scrolling, necessary for the sticky element to work */
+  }
+  
+  /* The relativeBox is positioned relative to its normal position */
+  #relativeBox {
+    width: 200px;
+    position: relative; /* Positioned relative to where it would normally be */
+    top: 500px; /* Moves it 20px down from its original position */
+    height: 100px;
+    margin-top: 50px; /* Adds extra space above it */
+    background-color: lightblue; /* Sets background color */
+  }
+  
+  /* The absoluteBox is positioned absolutely within the nearest positioned ancestor (container in this case) */
+  #absoluteBox {
+    width: 200px;
+    height: 100px;
+    position: absolute; /* Removed from normal document flow and positioned relative to the nearest positioned ancestor */
+    top: 0px; /* 200px from the top of the nearest positioned ancestor (container) */
+    left: 50px; /* 50px from the left of the nearest positioned ancestor */
+    background-color: lightcoral;
+  }
+  
+  /* The fixedBox is fixed to the viewport and does not move when scrolling */
+  #fixedBox {
+    width: 200px;
+    height: 100px;
+    position: fixed; /* Stays fixed relative to the viewport */
+    bottom: 0; /* Sticks to the bottom of the screen */
+    right: 0; /* Sticks to the right of the screen */
+    background-color: lightgreen;
+  }
+  
+  /* The stickyBox stays in place at the top of its container when scrolling */
+  #stickyBox {
+    position: sticky; /* Sticks to a defined position when scrolling within its container */
+    height: 100px;
+    width: 200px;
+    margin-top: 150px; /* Starts 150px below the top of its parent */
+    top: 0; /* When scrolling, it sticks at the top of the container */
+    background-color: lightpink;
+  }
+  
