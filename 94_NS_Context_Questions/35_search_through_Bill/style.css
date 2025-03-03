@@ -1,0 +1,31 @@
+table{
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td{
+    text-align: center;
+    padding: 12px;
+    border: 1px solid black;
+}
+
+table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+  }
+
+  table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row color */
+  }
+
+  table tr:hover {
+    background-color: #ddd; /* Hover effect */
+  }
+
+.no-items {
+  text-align: center;
+  font-style: italic;
+  color: red;
+}

@@ -72,3 +72,9 @@ greetPeter();
 // apply(): Immediately invokes the function with a new this value, passing arguments as an array.
 
 // bind(): Returns a new function with a set this value that you can call later.
+
+
+
+// .call()	✅ Yes	Individually (comma-separated)
+// .apply()	✅ Yes	As an array ([arg1, arg2])
+// .bind()	❌ No	Same as .call(), but returns a new function

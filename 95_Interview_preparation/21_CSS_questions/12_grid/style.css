@@ -1,0 +1,17 @@
+.container{
+    display: grid;
+    /* grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto; */
+    grid-template-columns: 1fr 2fr 1fr; /* 3 columns: first and third take equal space, second takes double */
+    gap: 10px;
+}
+.item{
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+/*Breakdown of grid-template-columns: 1fr 2fr 1fr;
+
+The first and third columns each take 1 fraction of the available space.
+The second column takes 2 fractions (twice as much as the first and third columns). */

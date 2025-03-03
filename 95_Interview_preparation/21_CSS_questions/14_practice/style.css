@@ -1,0 +1,51 @@
+@keyframes move {
+  0% {
+    transform: translateY(
+      0
+    ); /*The element starts at its original position (translateY(0)).*/
+  }
+  50% {
+    transform: translateY(
+      -10px
+    ); /*The element moves upward by 10px (translateY(-10px)*/
+  }
+  100% {
+    transform: translateY(
+      0
+    ); /*The element moves back to its original position (translateY(0)).*/
+  }
+}
+
+/* .box {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  border-radius: 50%;
+  background-color: coral;
+  animation: move 1s infinite;
+}
+
+h2 {
+    opacity: 1;
+  transition: color 0.3s ease, font-size 0.3s ease-in;
+}
+
+h2:hover {
+  color: red;
+  font-size: 30px;
+  opacity: 0.5; */
+/* } */
+
+#cont{
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px; /* Optional spacing between boxes */
+  width: 450px; /* Adjust to fit the grid properly */
+}
+
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: coral;
+} 

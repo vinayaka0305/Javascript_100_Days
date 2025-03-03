@@ -1,46 +1,41 @@
-const textDis = document.querySelector('#text');
-const countDis = document.querySelector('#count');
-const input1 = document.querySelector('#input1');
-const input2 = document.querySelector('#input2');
-const toggleBtn = document.querySelector('#toggle');
+const btns = document.querySelectorAll("button");
+const display = document.querySelector(".preview");
+const body = document.querySelector("body");
+const keyboard = document.querySelector(".keyboard");
 
+let inputText = "";
 
-let timer;
-
-
-toggleBtn.addEventListener('click',()=>{
-    if(input2.style.display === "none"){
-      input2.style.display = "inline"
-      // input2.removeAttribute('disabled')
-    }else{
-      input2.style.display = "none";
-      // input2.setAttribute('disabled','true');
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (btn.textContent == "space") {
+      inputText += " ";
+    } else {
+      inputText += btn.textContent;
     }
-})
-
-const handleChange1=(e)=>{
-  const inputVal = e.target.value;
-  countDis.textContent = inputVal.length;
-  clearTimeout(timer);
-  timer = setTimeout(()=>{
-    if(inputVal.length>0){
-      textDis.textContent = inputVal;
-      input1.value = '';
-      countDis.textContent = 0;
+    display.textContent = inputText;
+    if (inputText == "one") {
+      fetchData();
+    } else {
+      let quote = document.querySelector(".quote");
+      if (quote) {
+        quote.remove();
+        keyboard.classList.remove("hidden");
+      }
     }
-  },1000)
-}
+  });
+});
 
-
-const handleChange2=(e)=>{
-  const inputVal = e.target.value;
-  countDis.textContent = inputVal.length;
-  clearTimeout(timer);
-  timer = setTimeout(()=>{
-    if(inputVal.length>0){
-      textDis.textContent = inputVal;
-      input2.value = '';
-      countDis.textContent = 0;
-    }
-  },1000)
+const fetchData=async()=>{
+  try {
+    const response = await fetch(`https://quotes-api-self.vercel.app/quote`)
+    const data= await response.json();
+    const div = document.createElement('div');
+    div.textContent = data.quote
+    display.textContent = '';
+    div.setAttribute('class','quote')
+    display.appendChild(div);
+    keyboard.classList.add("hidden");
+  } catch (error) {
+    console.log(error);
+  }
 }

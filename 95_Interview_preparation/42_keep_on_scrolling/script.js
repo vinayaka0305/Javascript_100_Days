@@ -38,14 +38,12 @@ window.addEventListener("scroll", async () => {
   // Checking if the user has scrolled to the bottom of the page
   if (
     window.innerHeight + window.scrollY >=
-    document.documentElement.scrollHeight
+    document.documentElement.scrollHeight - 10
   ) {
     // Setting the fetching flag to true
     isFetching = true;
     // Fetching additional data and awaiting its completion
     await fetchData();
-    // Fetching data again (potential bug or redundant call here)
-    fetchData();
     // Resetting the fetching flag to false
     isFetching = false;
   }

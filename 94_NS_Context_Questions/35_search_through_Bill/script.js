@@ -45,21 +45,22 @@ const billItems = [
 ];
 
 function renderTable(items) {
-  if (items.length === 0) {
-    table.innerHTML = `<tr><td colspan="2">No items found</td></tr>`;
-  }
-
   let tableContent = `<tr>
             <th>Item</th>
             <th>Price</th>
         </tr>`;
 
-  items.forEach((item) => {
-    tableContent += `<tr>
-            <td>${item.itemName}</td>
-            <td>${item.price}</td>
-        </tr>`;
-  });
+  if (items.length === 0) {
+    tableContent = `<tr class="no-items"><td colspan="2">No items found</td></tr>`;
+  } else {
+    items.forEach((item) => {
+      tableContent += `<tr>
+                <td>${item.itemName}</td>
+                <td>${item.price}</td>
+            </tr>`;
+    });
+  }
+
   table.innerHTML = tableContent;
 }
 

@@ -21,6 +21,7 @@ body {
   li{
     padding: 5px;
     margin: 0px;
+    list-style:none;
   }
   li:nth-child(even) {
     /* margin-bottom: 10px; */
