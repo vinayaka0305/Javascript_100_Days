@@ -1,0 +1,15 @@
+View State: 
+This usually refers to the UI state of a webpage,like which session is expanded,
+which button is clicked, or what text is typed in the form.
+It only exists while you're on the page and disappears when you refresh or leave;
+
+Session State:
+This is data stored from a user's session, meaning it remains available as long as the user in on the website(even if they navigate to different pages).
+Once they close the browser or logout, the session state is lost
+It's often stored in cookies,session storage or on the server
+
+
+key Difference:
+View State: Exists only while you are on the page, refreshing = lost
+
+Session State: Stays as long as your session is active(until you close the browser)

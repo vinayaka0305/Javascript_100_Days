@@ -1,0 +1,34 @@
+Difference Between JavaScript (JS) and TypeScript (TS)
+
+
+1.Basic nature
+ JS : A programming language
+ TS : A superset of js that adds extra features like TypeScript
+
+2.Typing
+ JS: Dynamically typed(no type definitions);
+ TS: Statically typed (you define variable types)
+
+3.Error
+ JS: Catches errors only at run time;
+ TS: Catches errors at compile time(before running);
+
+4.Learning Curve:
+ JS : Easier for beginners(no need to worry about types)
+ TS: Slighlty harder but helps prevent bugs
+
+5.Usage
+ JS: Directly runs in the browser
+ TS: Needs to be compiled into javascript to run
+
+Conclusion
+Use JS for quick and simple projects
+Use TS for larger,more complex projects where catching error early is important
+
+// JavaScript
+let name = "Alice";  // No type specified
+name = 42;           // Allowed
+
+
+let name: string = "Alice"; // Type is string
+name = 42;                  // ❌ Error: Type mismatch

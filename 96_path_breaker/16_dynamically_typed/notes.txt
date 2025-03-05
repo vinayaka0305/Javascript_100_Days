@@ -1,0 +1,25 @@
+JS is a Dynamically typed language
+
+what does this mean?
+
+No need to declare the variable types(e,g.. string,number)
+
+A variable's type can change at run time
+
+//Ex
+
+let x = 10; //x is a number
+x = "Hello"; // Now x is a string(type changed);
+
+In contrast, a statically typed language(like java or c++) requires specifying types
+
+//
+In java
+
+int x = 10;// x must always number
+
+x = "hello" // Error/type mismatch
+
+----------------------------------------------------------------------------
+
+So JS is dynamic because you don't have to define the types and they can change at anytime.....
