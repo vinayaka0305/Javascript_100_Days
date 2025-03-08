@@ -1,0 +1,24 @@
+Types of Lists in HTML
+
+In HTML, there are 3 main types of lists:
+
+Ordered List (<ol>) → A numbered list (1, 2, 3...)
+Unordered List (<ul>) → A bulleted list (•, ○, ▪)
+Definition List (<dl>) → A list with terms and their descriptions
+
+What This Does?
+
+✅ Unordered List (ul)
+Uses square bullets instead of dots.
+Changes text color to blue.
+
+
+✅ Ordered List (ol)
+Uses Roman numerals (I, II, III) instead of numbers.
+Changes text color to green.
+
+
+✅ Definition List (dl)
+Has a light gray background.
+dt (term) is bold and dark red.
+dd (description) has extra spacing.

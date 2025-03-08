@@ -1,0 +1,1 @@
+Empty elements are HTML tags that do not have closing tags and do not contain any content inside

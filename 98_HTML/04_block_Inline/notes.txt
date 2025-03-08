@@ -1,0 +1,33 @@
+1. Block-Level Elements
+
+✅ Takes full width of the page (starts on a new line).
+✅ Pushes the next element to a new line.
+✅ Can contain other block and inline elements.
+
+Examples of Block-Level Elements:
+
+<div> → A container for other elements.
+<p> → A paragraph.
+<h1>, <h2>, <h3>... → Headings.
+<ul>, <ol> → Lists.
+<section>, <article>, <header>, <footer> → Layout elements.
+
+
+2. Inline Elements
+
+✅ Takes only the space needed (does NOT start on a new line).
+✅ Does NOT push the next element to a new line.
+✅ Can only contain text or other inline elements (NOT block elements).
+
+Examples of Inline Elements:
+
+<span> → A container for styling text.
+<a> → A link.
+<b>, <i>, <strong>, <em> → Text formatting.
+<img> → An image.
+<input> → A form input field.
+
+Which One to Use?
+
+Use Block-Level Elements for layout and structure (paragraphs, sections).
+Use Inline Elements for styling or linking small parts of text.

@@ -1,0 +1,17 @@
+1.<header> Tag
+
+It is a container that holds heading,logos,navigations or intro content
+It does not create a heading, but it groups heading related content
+Used for page headers or section headers
+
+
+2.<h1> Tag
+It is a heading tag that defines the most important heading on the page
+It should describe the main topic of the web page or section.
+You can have multiple h1 tags, but usually one per page is best
+
+
+When to Use Which?
+
+Use <header> to group headings, logos, and navigation.
+Use <h1> to define the main title of a page or section.

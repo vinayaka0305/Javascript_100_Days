@@ -1,0 +1,15 @@
+HTML (HyperText Markup Language) and XHTML (Extensible HyperText Markup Language) are both used to create web pages, but XHTML is a stricter and cleaner version of HTML.
+
+
+XHTML:
+Tags must be in lowercase
+All tags must be closed(e,g.. <br/>,<img/>)
+Doctype: <!DOCTYPE XHTML 1.0 Strict>
+Error Handling: Browsers can igone errors
+
+
+HTML:
+Tags can be written in uppercase or lowercase
+Some tags can be left open(e,g.. e,g.. <br>,<img>)
+Doctype: <!DOCTYPE html>
+Error Handling: Errors must be fixed before the page works
