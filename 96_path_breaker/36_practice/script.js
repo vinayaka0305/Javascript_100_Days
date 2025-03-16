@@ -1,34 +1,30 @@
-const selection = document.querySelector('#selection');
-const display = document.querySelector('#display');
-const btn = document.querySelector('#btn');
-
-const fruits = [
-    { name: "Lemon", type: "citrus" },
-    { name: "Orange", type: "citrus" },
-    { name: "Strawberry", type: "berry" },
-    { name: "Blueberry", type: "berry" },
-    { name: "Peach", type: "stone" },
-    { name: "Cherry", type: "stone" },
+const students = [
+  { name: "Ram", scores: [80, 95, 60] },
+  { name: "Mohan", scores: [85, 70, 90] },
+  { name: "Sai", scores: [60, 70, 80] },
+  { name: "Hemang", scores: [95, 90, 94] },
 ];
 
-btn.addEventListener('click',()=>{
-    const selectedVal = selection.value;
-    const filteredList = fruits.filter((item)=>
-        selectedVal === "all" || item.type == selectedVal
-    )
-    console.log(filteredList);
+const highestAverage = (students) => {
+  const result = students
+    .map((stud) => ({ name: stud.name, average: avg(stud.scores) }))
+    .filter((obj) => {
+      return obj.average > 90;
+    });
+  return result;
+};
 
-    display.innerHTML = '';
-    filteredList.forEach((item)=>{
-        const li = document.createElement('li');
-        li.textContent = item.name;
-        display.appendChild(li)
-    })
+const avg = (arr) => {
+  const total = arr.reduce((a, b) => a + b);
+  return total / arr.length;
+};
 
-})
+console.log(highestAverage(students));
 
-fruits.forEach((item)=>{
-    const li = document.createElement('li');
-    li.textContent = item.name;
-    display.appendChild(li)
+const obj = highestAverage(students);
+
+console.log(obj);
+
+obj.forEach((std)=>{
+    console.log(std.name,std.average)
 })
