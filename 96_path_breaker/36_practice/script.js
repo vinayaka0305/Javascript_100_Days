@@ -1,30 +1,19 @@
-const students = [
-  { name: "Ram", scores: [80, 95, 60] },
-  { name: "Mohan", scores: [85, 70, 90] },
-  { name: "Sai", scores: [60, 70, 80] },
-  { name: "Hemang", scores: [95, 90, 94] },
-];
+function findFirstNonRepeatingChar(str){
 
-const highestAverage = (students) => {
-  const result = students
-    .map((stud) => ({ name: stud.name, average: avg(stud.scores) }))
-    .filter((obj) => {
-      return obj.average > 90;
-    });
-  return result;
-};
+  const charCount = {};
 
-const avg = (arr) => {
-  const total = arr.reduce((a, b) => a + b);
-  return total / arr.length;
-};
+    for(let char of str){
+      charCount[char] = (charCount[char] || 0) +1;
+    }
+    console.log(charCount);
 
-console.log(highestAverage(students));
+    for(let char of str){
+      if(charCount[char] === 1){
+        return char;
+      }
+    }
+    return null;
+}
 
-const obj = highestAverage(students);
 
-console.log(obj);
-
-obj.forEach((std)=>{
-    console.log(std.name,std.average)
-})
+console.log(findFirstNonRepeatingChar("vivinayaka"))
