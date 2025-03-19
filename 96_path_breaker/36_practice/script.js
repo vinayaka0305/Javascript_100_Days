@@ -1,19 +1,25 @@
-function findFirstNonRepeatingChar(str){
+function getFormatedHtml(htmlText){
+  const indentSize = 4;
+  let indentLevel = 0;
+  let formattedHTML ="";
 
-  const charCount = {};
+  const lines = htmlText.replace(/>\s*</g,">\n<").split("\n");
+  console.log(lines);
 
-    for(let char of str){
-      charCount[char] = (charCount[char] || 0) +1;
+  lines.forEach((line)=>{
+    if(line.match(/^<\/\w/)){
+      indentLevel = Math.max(indentLevel-1,0);
     }
-    console.log(charCount);
+    formattedHTML += " ".repeat(indentSize * indentLevel) + line + "\n";
 
-    for(let char of str){
-      if(charCount[char] === 1){
-        return char;
-      }
+    if(line.match(/^<\w[^>]*[^/]?>$/)){
+      indentLevel++;
     }
-    return null;
-}
+  })
+  return formattedHTML.trim();
+} 
 
 
-console.log(findFirstNonRepeatingChar("vivinayaka"))
+const str = `<h1>Heading</h1><div><p>This is para</p></div>`
+
+console.log(getFormatedHtml(str));
