@@ -1,25 +1,67 @@
-function getFormatedHtml(htmlText){
-  const indentSize = 4;
-  let indentLevel = 0;
-  let formattedHTML ="";
+const orders = [
+  {
+    orderId: 1,
+    customerName: "Alice",
+    items: [
+      { name: "laptop", price: 10000 },
+      { name: "mouse", price: 1000 },
+    ],
+    status: "completed",
+  },
+  {
+    orderId: 2,
+    customerName: "Bob",
+    items: [
+      { name: "keyboard", price: 2000 },
+      { name: "monitor", price: 8000 },
+    ],
+    status: "pending",
+  },
+  {
+    orderId: 3,
+    customerName: "Charlie",
+    items: [
+      { name: "headphones", price: 3000 },
+      { name: "webcam", price: 2500 },
+    ],
+    status: "shipped",
+  },
+  {
+    orderId: 4,
+    customerName: "David",
+    items: [
+      { name: "printer", price: 7000 },
+      { name: "scanner", price: 5000 },
+    ],
+    status: "completed",
+  },
+  {
+    orderId: 5,
+    customerName: "Emma",
+    items: [
+      { name: "tablet", price: 12000 },
+      { name: "stylus", price: 1500 },
+    ],
+    status: "completed",
+  },
+  {
+    orderId: 6,
+    customerName: "Frank",
+    items: [
+      { name: "smartphone", price: 15000 },
+      { name: "charger", price: 2000 },
+    ],
+    status: "shipped",
+  },
+];
 
-  const lines = htmlText.replace(/>\s*</g,">\n<").split("\n");
-  console.log(lines);
+const totalAmoutSpentByCompletedStatas = (orders) => {
+   const completedOrderSummary = orders.filter((order)=>order.status === "completed").
+   map((order)=>({
+    name:order.customerName,
+    total:order.items.reduce((a,b)=>a+b.price,0)
+   }))
+   return completedOrderSummary;
+};
 
-  lines.forEach((line)=>{
-    if(line.match(/^<\/\w/)){
-      indentLevel = Math.max(indentLevel-1,0);
-    }
-    formattedHTML += " ".repeat(indentSize * indentLevel) + line + "\n";
-
-    if(line.match(/^<\w[^>]*[^/]?>$/)){
-      indentLevel++;
-    }
-  })
-  return formattedHTML.trim();
-} 
-
-
-const str = `<h1>Heading</h1><div><p>This is para</p></div>`
-
-console.log(getFormatedHtml(str));
+console.log(totalAmoutSpentByCompletedStatas(orders));
